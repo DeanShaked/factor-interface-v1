@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { ButtonDropdown } from 'components/Button'
 import Column from 'components/Column'
 import Modal from 'components/Modal'
@@ -76,7 +76,7 @@ export const ProposalActionSelector = ({
     <ProposalActionSelectorFlex>
       <ProposalActionSelectorContainer className={className}>
         <ActionSelectorHeader>
-          <Trans>Proposed Action</Trans>
+          Proposed Action
         </ActionSelectorHeader>
         <ActionDropdown onClick={onClick}>{proposalAction}</ActionDropdown>
       </ProposalActionSelectorContainer>
@@ -103,7 +103,7 @@ export function ProposalActionSelectorModal({
         <PaddedColumn gap="16px">
           <RowBetween>
             <Text fontWeight={500} fontSize={16}>
-              <Trans>Select an action</Trans>
+              Select an action
             </Text>
             <CloseIcon onClick={onDismiss} />
           </RowBetween>
@@ -112,14 +112,14 @@ export function ProposalActionSelectorModal({
         <MenuItem onClick={() => handleProposalActionSelect(ProposalAction.TRANSFER_TOKEN)}>
           <Column>
             <Text fontWeight={500}>
-              <Trans>Transfer Token</Trans>
+              Transfer Token
             </Text>
           </Column>
         </MenuItem>
         <MenuItem onClick={() => handleProposalActionSelect(ProposalAction.APPROVE_TOKEN)}>
           <Column>
             <Text fontWeight={500}>
-              <Trans>Approve Token</Trans>
+              Approve Token
             </Text>
           </Column>
         </MenuItem>

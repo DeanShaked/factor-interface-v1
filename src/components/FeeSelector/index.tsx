@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Currency } from '@uniswap/sdk-core'
 import { FeeAmount } from '@uniswap/v3-sdk'
 import { useWeb3React } from '@web3-react/core'
@@ -150,16 +150,16 @@ export default function FeeSelector({
               {!feeAmount ? (
                 <>
                   <ThemedText.DeprecatedLabel>
-                    <Trans>Fee tier</Trans>
+                    Fee tier
                   </ThemedText.DeprecatedLabel>
                   <ThemedText.DeprecatedMain fontWeight={400} fontSize="12px" textAlign="left">
-                    <Trans>The % you will earn in fees.</Trans>
+                    The % you will earn in fees.
                   </ThemedText.DeprecatedMain>
                 </>
               ) : (
                 <>
                   <ThemedText.DeprecatedLabel className="selected-fee-label">
-                    <Trans>{FEE_AMOUNT_DETAIL[feeAmount].label}% fee tier</Trans>
+                    {FEE_AMOUNT_DETAIL[feeAmount].label}% fee tier
                   </ThemedText.DeprecatedLabel>
                   <Box style={{ width: 'fit-content', marginTop: '8px' }} className="selected-fee-percentage">
                     {distributions && (
@@ -175,7 +175,7 @@ export default function FeeSelector({
             </AutoColumn>
 
             <ButtonGray onClick={() => setShowOptions(!showOptions)} width="auto" padding="4px" $borderRadius="6px">
-              {showOptions ? <Trans>Hide</Trans> : <Trans>Edit</Trans>}
+              {showOptions ? Hide : Edit}
             </ButtonGray>
           </RowBetween>
         </FocusedOutlineCard>

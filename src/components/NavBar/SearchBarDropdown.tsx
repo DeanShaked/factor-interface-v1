@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { useTrace } from '@uniswap/analytics'
 import { InterfaceSectionName, NavBarSearchTypes } from '@uniswap/analytics-events'
 import { useIsNftPage } from 'hooks/useIsNftPage'
@@ -219,11 +219,11 @@ export const SearchBarDropdown = ({
               suggestion_type: NavBarSearchTypes.TOKEN_SUGGESTION,
               ...eventProperties,
             }}
-            header={<Trans>Tokens</Trans>}
+            header={<>Tokens</>}
           />
         ) : (
           <Box className={styles.notFoundContainer}>
-            <Trans>No tokens found.</Trans>
+            No tokens found.
           </Box>
         )
 
@@ -239,7 +239,7 @@ export const SearchBarDropdown = ({
               suggestion_type: NavBarSearchTypes.COLLECTION_SUGGESTION,
               ...eventProperties,
             }}
-            header={<Trans>NFT Collections</Trans>}
+            header={<>"NFT Collections"</>}
           />
         ) : (
           <Box className={styles.notFoundContainer}>No NFT collections found.</Box>
@@ -275,7 +275,7 @@ export const SearchBarDropdown = ({
                   suggestion_type: NavBarSearchTypes.RECENT_SEARCH,
                   ...eventProperties,
                 }}
-                header={<Trans>Recent searches</Trans>}
+                header={<>Recent searches</>}
                 headerIcon={<ClockIcon />}
               />
             )}
@@ -290,7 +290,7 @@ export const SearchBarDropdown = ({
                   suggestion_type: NavBarSearchTypes.TOKEN_TRENDING,
                   ...eventProperties,
                 }}
-                header={<Trans>Popular tokens</Trans>}
+                header={<>Popular tokens</>}
                 headerIcon={<TrendingArrow />}
                 isLoading={trendingTokensAreLoading}
               />
@@ -306,7 +306,7 @@ export const SearchBarDropdown = ({
                   suggestion_type: NavBarSearchTypes.COLLECTION_TRENDING,
                   ...eventProperties,
                 }}
-                header={<Trans>Popular NFT collections</Trans>}
+                header={<>Popular NFT collections</>}
                 headerIcon={<TrendingArrow />}
                 isLoading={trendingCollectionsAreLoading}
               />

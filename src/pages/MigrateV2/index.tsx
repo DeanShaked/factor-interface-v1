@@ -1,6 +1,6 @@
 import { getCreate2Address } from '@ethersproject/address'
 import { keccak256, pack } from '@ethersproject/solidity'
-import { Trans } from '@lingui/macro'
+
 import { Token } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
@@ -118,31 +118,31 @@ export default function MigrateV2() {
           <AutoRow style={{ alignItems: 'center', justifyContent: 'space-between' }} gap="8px">
             <BackArrow to="/pool/v2" />
             <ThemedText.DeprecatedMediumHeader>
-              <Trans>Migrate V2 Liquidity</Trans>
+              Migrate V2 Liquidity
             </ThemedText.DeprecatedMediumHeader>
             <div>
-              <QuestionHelper text={<Trans>Migrate your liquidity tokens from Uniswap V2 to Uniswap V3.</Trans>} />
+              <QuestionHelper text={Migrate your liquidity tokens from Uniswap V2 to Uniswap V3.} />
             </div>
           </AutoRow>
 
           <ThemedText.DeprecatedBody style={{ marginBottom: 8, fontWeight: 400 }}>
-            <Trans>
+            
               For each pool shown below, click migrate to remove your liquidity from Uniswap V2 and deposit it into
               Uniswap V3.
-            </Trans>
+            
           </ThemedText.DeprecatedBody>
 
           {!account ? (
             <LightCard padding="40px">
               <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
-                <Trans>Connect to a wallet to view your V2 liquidity.</Trans>
+                Connect to a wallet to view your V2 liquidity.
               </ThemedText.DeprecatedBody>
             </LightCard>
           ) : v2IsLoading ? (
             <LightCard padding="40px">
               <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
                 <Dots>
-                  <Trans>Loading</Trans>
+                  Loading
                 </Dots>
               </ThemedText.DeprecatedBody>
             </LightCard>
@@ -166,17 +166,17 @@ export default function MigrateV2() {
               })}
             </>
           ) : (
-            <EmptyState message={<Trans>No V2 Liquidity found.</Trans>} />
+            <EmptyState message={No V2 Liquidity found.} />
           )}
 
           <AutoColumn justify="center" gap="md">
             <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
-              <Trans>
+              
                 Don’t see one of your v2 positions?{' '}
                 <StyledInternalLink id="import-pool-link" to="/find?origin=/migrate/v2">
                   Import it.
                 </StyledInternalLink>
-              </Trans>
+              
             </Text>
           </AutoColumn>
         </AutoColumn>

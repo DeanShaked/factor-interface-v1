@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to the Uniswap interface! 🦄
+Thank you for your interest in contributing to the Factor interface!
 
 # Development
 
@@ -106,20 +106,3 @@ When building larger features or collaborating with other developers, create a n
 Use the automatic Vercel preview for sharing the feature to collect feedback.  
 When the feature is ready for review, create a new pull request from the feature branch into `main` and request reviews from
 the appropriate UX reviewers (PMs or designers).
-
-## Finding a first issue
-
-Start with issues with the label
-[`good first issue`](https://github.com/Uniswap/uniswap-interface/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
-
-# Translations
-
-Uniswap uses [Crowdin](https://crowdin.com/project/uniswap-interface) for managing translations.
-[This workflow](./.github/workflows/crowdin.yaml) uploads new strings for translation to the Crowdin project whenever code using the [lingui translation macros](https://lingui.js.org/ref/macro.html) is merged into `main`.
-
-Every hour, translations are synced back down from Crowdin to the repository in [this other workflow](./.github/workflows/crowdin-sync.yaml).
-We sync to the repository on a schedule, rather than download translations at build time, so that builds are always reproducible.
-
-You can contribute by joining Crowdin to proofread existing translations [here](https://crowdin.com/project/uniswap-interface/invite?d=93i5n413q403t4g473p443o4c3t2g3s21343u2c3n403l4b3v2735353i4g4k4l4g453j4g4o4j4e4k4b323l4a3h463s4g453q443m4e3t2b303s2a35353l403o443v293e303k4g4n4r4g483i4g4r4j4e4o473i5n4a3t463t4o4)
-
-Or, ask to join us as a translator in the Discord!!

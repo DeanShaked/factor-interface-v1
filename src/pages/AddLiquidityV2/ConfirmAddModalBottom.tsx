@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Currency, CurrencyAmount, Fraction, Percent } from '@uniswap/sdk-core'
 import { Text } from 'rebass'
 
@@ -27,7 +27,7 @@ export function ConfirmAddModalBottom({
     <>
       <RowBetween>
         <ThemedText.DeprecatedBody>
-          <Trans>{currencies[Field.CURRENCY_A]?.symbol} Deposited</Trans>
+          {currencies[Field.CURRENCY_A]?.symbol} Deposited
         </ThemedText.DeprecatedBody>
         <RowFixed>
           <CurrencyLogo currency={currencies[Field.CURRENCY_A]} style={{ marginRight: '8px' }} />
@@ -36,7 +36,7 @@ export function ConfirmAddModalBottom({
       </RowBetween>
       <RowBetween>
         <ThemedText.DeprecatedBody>
-          <Trans>{currencies[Field.CURRENCY_B]?.symbol} Deposited</Trans>
+          {currencies[Field.CURRENCY_B]?.symbol} Deposited
         </ThemedText.DeprecatedBody>
         <RowFixed>
           <CurrencyLogo currency={currencies[Field.CURRENCY_B]} style={{ marginRight: '8px' }} />
@@ -45,7 +45,7 @@ export function ConfirmAddModalBottom({
       </RowBetween>
       <RowBetween>
         <ThemedText.DeprecatedBody>
-          <Trans>Rates</Trans>
+          Rates
         </ThemedText.DeprecatedBody>
         <ThemedText.DeprecatedBody>
           {`1 ${currencies[Field.CURRENCY_A]?.symbol} = ${price?.toSignificant(4)} ${
@@ -62,15 +62,15 @@ export function ConfirmAddModalBottom({
       </RowBetween>
       <RowBetween>
         <ThemedText.DeprecatedBody>
-          <Trans>Share of Pool:</Trans>
+          Share of Pool:
         </ThemedText.DeprecatedBody>
         <ThemedText.DeprecatedBody>
-          <Trans>{noLiquidity ? '100' : poolTokenPercentage?.toSignificant(4)}%</Trans>
+          {noLiquidity ? '100' : poolTokenPercentage?.toSignificant(4)}%
         </ThemedText.DeprecatedBody>
       </RowBetween>
       <ButtonPrimary style={{ margin: '20px 0 0 0' }} onClick={onAdd}>
         <Text fontWeight={500} fontSize={20}>
-          {noLiquidity ? <Trans>Create Pool & Supply</Trans> : <Trans>Confirm Supply</Trans>}
+          {noLiquidity ? Create Pool & Supply : Confirm Supply}
         </Text>
       </ButtonPrimary>
     </>

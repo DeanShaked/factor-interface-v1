@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Currency, Percent, TradeType } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import Card from 'components/Card'
@@ -69,15 +69,15 @@ export function AdvancedSwapDetails({
           <RowFixed>
             <MouseoverTooltip
               text={
-                <Trans>
+                
                   The amount you expect to receive at the current market price. You may receive less or more if the
                   market price changes while your transaction is pending.
-                </Trans>
+                
               }
               disableHover={hideInfoTooltips}
             >
               <ThemedText.DeprecatedSubHeader color={theme.textPrimary}>
-                <Trans>Expected Output</Trans>
+                Expected Output
               </ThemedText.DeprecatedSubHeader>
             </MouseoverTooltip>
           </RowFixed>
@@ -92,11 +92,11 @@ export function AdvancedSwapDetails({
         <RowBetween>
           <RowFixed>
             <MouseoverTooltip
-              text={<Trans>The impact your trade has on the market price of this pool.</Trans>}
+              text={The impact your trade has on the market price of this pool.}
               disableHover={hideInfoTooltips}
             >
               <ThemedText.DeprecatedSubHeader color={theme.textPrimary}>
-                <Trans>Price Impact</Trans>
+                Price Impact
               </ThemedText.DeprecatedSubHeader>
             </MouseoverTooltip>
           </RowFixed>
@@ -111,20 +111,20 @@ export function AdvancedSwapDetails({
           <RowFixed style={{ marginRight: '20px' }}>
             <MouseoverTooltip
               text={
-                <Trans>
+                
                   The minimum amount you are guaranteed to receive. If the price slips any further, your transaction
                   will revert.
-                </Trans>
+                
               }
               disableHover={hideInfoTooltips}
             >
               <ThemedText.DeprecatedSubHeader color={theme.textTertiary}>
                 {trade.tradeType === TradeType.EXACT_INPUT ? (
-                  <Trans>Minimum received</Trans>
+                  Minimum received
                 ) : (
-                  <Trans>Maximum sent</Trans>
+                  Maximum sent
                 )}{' '}
-                <Trans>after slippage</Trans> ({allowedSlippage.toFixed(2)}%)
+                after slippage ({allowedSlippage.toFixed(2)}%)
               </ThemedText.DeprecatedSubHeader>
             </MouseoverTooltip>
           </RowFixed>
@@ -140,14 +140,14 @@ export function AdvancedSwapDetails({
           <RowBetween>
             <MouseoverTooltip
               text={
-                <Trans>
+                
                   The fee paid to miners who process your transaction. This must be paid in {nativeCurrency.symbol}.
-                </Trans>
+                
               }
               disableHover={hideInfoTooltips}
             >
               <ThemedText.DeprecatedSubHeader color={theme.textTertiary}>
-                <Trans>Network Fee</Trans>
+                Network Fee
               </ThemedText.DeprecatedSubHeader>
             </MouseoverTooltip>
             <TextWithLoadingPlaceholder syncing={syncing} width={50}>

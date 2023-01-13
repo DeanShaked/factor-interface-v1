@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { FeeAmount } from '@uniswap/v3-sdk'
 import Badge from 'components/Badge'
 import { useFeeTierDistribution } from 'hooks/useFeeTierDistribution'
@@ -19,11 +19,11 @@ export function FeeTierPercentageBadge({
     <Badge>
       <ThemedText.DeprecatedLabel fontSize={10}>
         {!distributions || poolState === PoolState.NOT_EXISTS || poolState === PoolState.INVALID ? (
-          <Trans>Not created</Trans>
+          Not created
         ) : distributions[feeAmount] !== undefined ? (
-          <Trans>{distributions[feeAmount]?.toFixed(0)}% select</Trans>
+          {distributions[feeAmount]?.toFixed(0)}% select
         ) : (
-          <Trans>No data</Trans>
+          No data
         )}
       </ThemedText.DeprecatedLabel>
     </Badge>

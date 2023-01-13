@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { sendAnalyticsEvent, user } from '@uniswap/analytics'
 import { CustomUserProperties, InterfaceEventName, WalletConnectionResult } from '@uniswap/analytics-events'
 import { useWeb3React } from '@web3-react/core'
@@ -30,7 +30,6 @@ import { ReactComponent as Close } from '../../assets/images/x.svg'
 import { useModalIsOpen, useToggleWalletModal } from '../../state/application/hooks'
 import { ApplicationModal } from '../../state/application/reducer'
 import { ExternalLink, ThemedText } from '../../theme'
-import AccountDetails from '../AccountDetails'
 import Modal from '../Modal'
 import { CoinbaseWalletOption, OpenCoinbaseWalletOption } from './CoinbaseWalletOption'
 import { InjectedOption, InstallMetaMaskOption, MetaMaskOption } from './InjectedOption'
@@ -293,18 +292,6 @@ export default function WalletModal({
   }
 
   function getModalContent() {
-    if (walletView === WALLET_VIEWS.ACCOUNT) {
-      return (
-        <AccountDetails
-          toggleWalletModal={toggleWalletModal}
-          pendingTransactions={pendingTransactions}
-          confirmedTransactions={confirmedTransactions}
-          ENSName={ENSName}
-          openOptions={openOptions}
-        />
-      )
-    }
-
     let headerRow
     if (walletView === WALLET_VIEWS.PENDING || walletView === WALLET_VIEWS.ACCOUNT || !!account) {
       headerRow = (
@@ -318,21 +305,22 @@ export default function WalletModal({
       headerRow = (
         <HeaderRow>
           <HoverText>
-            <Trans>Connect a wallet</Trans>
+            Connect a wallet
           </HoverText>
         </HeaderRow>
       )
     }
 
+    // TODO: change link refs to factor tos
     function getTermsOfService(walletView: string) {
       if (walletView === WALLET_VIEWS.PENDING) return null
 
       const content = (
-        <Trans>
-          By connecting a wallet, you agree to Uniswap Labs’{' '}
-          <ExternalLink href="https://uniswap.org/terms-of-service/">Terms of Service</ExternalLink> and consent to its{' '}
-          <ExternalLink href="https://uniswap.org/privacy-policy">Privacy Policy</ExternalLink>.
-        </Trans>
+        
+          `By connecting a wallet, you agree to Factor
+          ${<ExternalLink href="https://uniswap.org/terms-of-service/">Terms of Service</ExternalLink>} and consent to its"{' '}
+          ${<ExternalLink href="https://uniswap.org/privacy-policy">Privacy Policy</ExternalLink>}.`
+        
       )
       return (
         <AutoRow style={{ flexWrap: 'nowrap', padding: '4px 16px' }}>

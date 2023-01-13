@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { sendAnalyticsEvent } from '@uniswap/analytics'
 import { InterfaceEventName } from '@uniswap/analytics-events'
 import { formatUSDPrice } from '@uniswap/conedison/format'
@@ -297,13 +297,13 @@ const AuthenticatedHeader = () => {
         </StatusWrapper>
         <IconContainer>
           <IconButton onClick={copy} Icon={Copy}>
-            {isCopied ? <Trans>Copied!</Trans> : <Trans>Copy</Trans>}
+            {isCopied ? "Copied!" : "Copy"}
           </IconButton>
           <IconButton href={`${explorer}address/${account}`} target="_blank" Icon={ExternalLinkIcon}>
-            <Trans>Explore</Trans>
+            Explore
           </IconButton>
           <IconButton data-testid="wallet-disconnect" onClick={disconnect} Icon={Power}>
-            <Trans>Disconnect</Trans>
+            Disconnect
           </IconButton>
         </IconContainer>
       </HeaderWrapper>
@@ -320,7 +320,7 @@ const AuthenticatedHeader = () => {
           size={ButtonSize.medium}
           emphasis={ButtonEmphasis.medium}
         >
-          <Trans>View and sell NFTs</Trans>
+          View and sell NFTs
         </ProfileButton>
         {fiatOnrampFlag === BaseVariant.Enabled && (
           <>
@@ -336,16 +336,16 @@ const AuthenticatedHeader = () => {
               ) : (
                 <>
                   {fiatOnrampAvailabilityLoading ? <StyledLoadingButtonSpinner /> : <CreditCard />}{' '}
-                  <Trans>Buy crypto</Trans>
+                  Buy crypto
                 </>
               )}
             </BuyCryptoButton>
             {Boolean(!fiatOnrampAvailable && fiatOnrampAvailabilityChecked) && (
               <FiatOnrampNotAvailableText marginTop="8px">
-                <Trans>Not available in your region</Trans>
+                Not available in your region
                 <Tooltip
                   show={showFiatOnrampUnavailableTooltip}
-                  text={<Trans>Moonpay is not available in some regions. Click to learn more.</Trans>}
+                  text={"Moonpay is not available in some regions. Click to learn more."}
                 >
                   <FiatOnrampAvailabilityExternalLink
                     onMouseEnter={openFiatOnrampUnavailableTooltip}
@@ -362,12 +362,12 @@ const AuthenticatedHeader = () => {
         )}
         {isUnclaimed && (
           <UNIButton onClick={openClaimModal} size={ButtonSize.medium} emphasis={ButtonEmphasis.medium}>
-            <Trans>Claim</Trans> {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} <Trans>reward</Trans>
+            Claim {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} reward
           </UNIButton>
         )}
         {isClaimAvailable && (
           <UNIButton size={ButtonSize.medium} emphasis={ButtonEmphasis.medium} onClick={openNftModal}>
-            <Trans>Claim Uniswap NFT Airdrop</Trans>
+            Claim Uniswap NFT Airdrop
           </UNIButton>
         )}
       </Column>

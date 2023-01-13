@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Trace } from '@uniswap/analytics'
 import { InterfacePageName } from '@uniswap/analytics-events'
 import { Pair } from '@uniswap/v2-sdk'
@@ -150,15 +150,15 @@ export default function Pool() {
               <AutoColumn gap="md">
                 <RowBetween>
                   <ThemedText.DeprecatedWhite fontWeight={600}>
-                    <Trans>Liquidity provider rewards</Trans>
+                    Liquidity provider rewards
                   </ThemedText.DeprecatedWhite>
                 </RowBetween>
                 <RowBetween>
                   <ThemedText.DeprecatedWhite fontSize={14}>
-                    <Trans>
+                    
                       Liquidity providers earn a 0.3% fee on all trades proportional to their share of the pool. Fees
                       are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
-                    </Trans>
+                    
                   </ThemedText.DeprecatedWhite>
                 </RowBetween>
                 <ExternalLink
@@ -167,7 +167,7 @@ export default function Pool() {
                   href="https://docs.uniswap.org/protocol/V2/concepts/core-concepts/pools"
                 >
                   <ThemedText.DeprecatedWhite fontSize={14}>
-                    <Trans>Read more about providing liquidity</Trans>
+                    Read more about providing liquidity
                   </ThemedText.DeprecatedWhite>
                 </ExternalLink>
               </AutoColumn>
@@ -181,7 +181,7 @@ export default function Pool() {
               <AutoColumn gap="md" style={{ width: '100%' }}>
                 <Layer2Prompt>
                   <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
-                    <Trans>V2 Pool is not available on Layer 2. Switch to Layer 1 Ethereum.</Trans>
+                    V2 Pool is not available on Layer 2. Switch to Layer 1 Ethereum.
                   </ThemedText.DeprecatedBody>
                 </Layer2Prompt>
               </AutoColumn>
@@ -192,21 +192,21 @@ export default function Pool() {
                 <TitleRow style={{ marginTop: '1rem' }} padding="0">
                   <HideSmall>
                     <ThemedText.DeprecatedMediumHeader style={{ marginTop: '0.5rem', justifySelf: 'flex-start' }}>
-                      <Trans>Your V2 liquidity</Trans>
+                      Your V2 liquidity
                     </ThemedText.DeprecatedMediumHeader>
                   </HideSmall>
                   <ButtonRow>
                     <ResponsiveButtonSecondary as={Link} padding="6px 8px" to="/add/v2/ETH">
-                      <Trans>Create a pair</Trans>
+                      Create a pair
                     </ResponsiveButtonSecondary>
                     <ResponsiveButtonPrimary id="find-pool-button" as={Link} to="/pool/v2/find" padding="6px 8px">
                       <Text fontWeight={500} fontSize={16}>
-                        <Trans>Import Pool</Trans>
+                        Import Pool
                       </Text>
                     </ResponsiveButtonPrimary>
                     <ResponsiveButtonPrimary id="join-pool-button" as={Link} to="/add/v2/ETH" padding="6px 8px">
                       <Text fontWeight={500} fontSize={16}>
-                        <Trans>Add V2 Liquidity</Trans>
+                        Add V2 Liquidity
                       </Text>
                     </ResponsiveButtonPrimary>
                   </ButtonRow>
@@ -215,14 +215,14 @@ export default function Pool() {
                 {!account ? (
                   <Card padding="40px">
                     <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
-                      <Trans>Connect to a wallet to view your liquidity.</Trans>
+                      Connect to a wallet to view your liquidity.
                     </ThemedText.DeprecatedBody>
                   </Card>
                 ) : v2IsLoading ? (
                   <EmptyProposals>
                     <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
                       <Dots>
-                        <Trans>Loading</Trans>
+                        Loading
                       </Dots>
                     </ThemedText.DeprecatedBody>
                   </EmptyProposals>
@@ -230,12 +230,12 @@ export default function Pool() {
                   <>
                     <ButtonSecondary>
                       <RowBetween>
-                        <Trans>
+                        
                           <ExternalLink href={'https://v2.info.uniswap.org/account/' + account}>
                             Account analytics and accrued fees
                           </ExternalLink>
                           <span> ↗ </span>
-                        </Trans>
+                        
                       </RowBetween>
                     </ButtonSecondary>
                     {v2PairsWithoutStakedAmount.map((v2Pair) => (
@@ -265,14 +265,14 @@ export default function Pool() {
                         }}
                       >
                         <ChevronsRight size={16} style={{ marginRight: '8px' }} />
-                        <Trans>Migrate Liquidity to V3</Trans>
+                        Migrate Liquidity to V3
                       </ButtonOutlined>
                     </RowFixed>
                   </>
                 ) : (
                   <EmptyProposals>
                     <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
-                      <Trans>No liquidity found.</Trans>
+                      No liquidity found.
                     </ThemedText.DeprecatedBody>
                   </EmptyProposals>
                 )}

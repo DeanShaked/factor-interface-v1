@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { sendAnalyticsEvent, Trace, TraceEvent } from '@uniswap/analytics'
 import {
   BrowserEvent,
@@ -584,9 +584,9 @@ export default function Swap({ className }: { className?: string }) {
                   <SwapCurrencyInputPanel
                     label={
                       independentField === Field.OUTPUT && !showWrap ? (
-                        <Trans>From (at most)</Trans>
+                        From (at most)
                       ) : (
-                        <Trans>From</Trans>
+                        From
                       )
                     }
                     value={formattedAmounts[Field.INPUT]}
@@ -634,7 +634,7 @@ export default function Swap({ className }: { className?: string }) {
                       value={formattedAmounts[Field.OUTPUT]}
                       onUserInput={handleTypeOutput}
                       label={
-                        independentField === Field.INPUT && !showWrap ? <Trans>To (at least)</Trans> : <Trans>To</Trans>
+                        independentField === Field.INPUT && !showWrap ? To (at least) : To
                       }
                       showMaxButton={false}
                       hideBalance={false}
@@ -656,7 +656,7 @@ export default function Swap({ className }: { className?: string }) {
                           <ArrowDown size="16" color={theme.textSecondary} />
                         </ArrowWrapper>
                         <LinkStyledButton id="remove-recipient-button" onClick={() => onChangeRecipient(null)}>
-                          <Trans>- Remove recipient</Trans>
+                          - Remove recipient
                         </LinkStyledButton>
                       </AutoRow>
                       <AddressInputPanel id="recipient" value={recipient} onChange={onChangeRecipient} />
@@ -679,7 +679,7 @@ export default function Swap({ className }: { className?: string }) {
                 {swapIsUnsupported ? (
                   <ButtonPrimary disabled={true}>
                     <ThemedText.DeprecatedMain mb="4px">
-                      <Trans>Unsupported Asset</Trans>
+                      Unsupported Asset
                     </ThemedText.DeprecatedMain>
                   </ButtonPrimary>
                 ) : !account ? (
@@ -690,7 +690,7 @@ export default function Swap({ className }: { className?: string }) {
                     element={InterfaceElementName.CONNECT_WALLET_BUTTON}
                   >
                     <ButtonLight onClick={toggleWalletModal} fontWeight={600}>
-                      <Trans>Connect Wallet</Trans>
+                      Connect Wallet
                     </ButtonLight>
                   </TraceEvent>
                 ) : showWrap ? (
@@ -698,15 +698,15 @@ export default function Swap({ className }: { className?: string }) {
                     {wrapInputError ? (
                       <WrapErrorText wrapInputError={wrapInputError} />
                     ) : wrapType === WrapType.WRAP ? (
-                      <Trans>Wrap</Trans>
+                      Wrap
                     ) : wrapType === WrapType.UNWRAP ? (
-                      <Trans>Unwrap</Trans>
+                      Unwrap
                     ) : null}
                   </ButtonPrimary>
                 ) : routeNotFound && userHasSpecifiedInputOutput && !routeIsLoading && !routeIsSyncing ? (
                   <GrayCard style={{ textAlign: 'center' }}>
                     <ThemedText.DeprecatedMain mb="4px">
-                      <Trans>Insufficient liquidity for this trade.</Trans>
+                      Insufficient liquidity for this trade.
                     </ThemedText.DeprecatedMain>
                   </GrayCard>
                 ) : showApproveFlow ? (
@@ -726,11 +726,11 @@ export default function Swap({ className }: { className?: string }) {
                           {/* we need to shorten this string on mobile */}
                           {approvalState === ApprovalState.APPROVED || signatureState === UseERC20PermitState.SIGNED ? (
                             <ThemedText.SubHeader width="100%" textAlign="center" color="textSecondary">
-                              <Trans>You can now trade {currencies[Field.INPUT]?.symbol}</Trans>
+                              You can now trade {currencies[Field.INPUT]?.symbol}
                             </ThemedText.SubHeader>
                           ) : (
                             <ThemedText.SubHeader width="100%" textAlign="center" color="white">
-                              <Trans>Allow the Uniswap Protocol to use your {currencies[Field.INPUT]?.symbol}</Trans>
+                              Allow the Uniswap Protocol to use your {currencies[Field.INPUT]?.symbol}
                             </ThemedText.SubHeader>
                           )}
 
@@ -742,10 +742,10 @@ export default function Swap({ className }: { className?: string }) {
                           ) : (
                             <MouseoverTooltip
                               text={
-                                <Trans>
+                                
                                   You must give the Uniswap smart contracts permission to use your{' '}
                                   {currencies[Field.INPUT]?.symbol}. You only have to do this once per token.
-                                </Trans>
+                                
                               }
                             >
                               <HelpCircle size="20" color={theme.white} style={{ marginLeft: '8px' }} />
@@ -780,11 +780,11 @@ export default function Swap({ className }: { className?: string }) {
                       >
                         <Text fontSize={16} fontWeight={600}>
                           {priceImpactTooHigh ? (
-                            <Trans>High Price Impact</Trans>
+                            High Price Impact
                           ) : trade && priceImpactSeverity > 2 ? (
-                            <Trans>Swap Anyway</Trans>
+                            Swap Anyway
                           ) : (
-                            <Trans>Swap</Trans>
+                            Swap
                           )}
                         </Text>
                       </ButtonError>
@@ -802,21 +802,21 @@ export default function Swap({ className }: { className?: string }) {
                       <>
                         <Loader size="20px" stroke={theme.accentWarning} />
                         <ThemedText.SubHeader color="accentWarning">
-                          <Trans>Approve in your wallet</Trans>
+                          Approve in your wallet
                         </ThemedText.SubHeader>
                       </>
                     ) : isPermitFailed ? (
                       <>
                         <AlertTriangle size={20} stroke={theme.accentWarning} />
                         <ThemedText.SubHeader color="accentWarning">
-                          <Trans>Approval failed. Try again.</Trans>
+                          Approval failed. Try again.
                         </ThemedText.SubHeader>
                       </>
                     ) : isApprovalLoading ? (
                       <>
                         <Loader size="20px" stroke={theme.accentWarning} />
                         <ThemedText.SubHeader color="accentWarning">
-                          <Trans>Approval pending</Trans>
+                          Approval pending
                         </ThemedText.SubHeader>
                       </>
                     ) : (
@@ -824,17 +824,17 @@ export default function Swap({ className }: { className?: string }) {
                         <div style={{ height: 20 }}>
                           <MouseoverTooltip
                             text={
-                              <Trans>
+                              
                                 Permission is required for Uniswap to swap each token. This will expire after one month
                                 for your security.
-                              </Trans>
+                              
                             }
                           >
                             <Info size={20} color={theme.accentWarning} />
                           </MouseoverTooltip>
                         </div>
                         <ThemedText.SubHeader color="accentWarning">
-                          <Trans>Approve use of {currencies[Field.INPUT]?.symbol}</Trans>
+                          Approve use of {currencies[Field.INPUT]?.symbol}
                         </ThemedText.SubHeader>
                       </>
                     )}
@@ -868,13 +868,13 @@ export default function Swap({ className }: { className?: string }) {
                       {swapInputError ? (
                         swapInputError
                       ) : routeIsSyncing || routeIsLoading ? (
-                        <Trans>Swap</Trans>
+                        Swap
                       ) : priceImpactTooHigh ? (
-                        <Trans>Price Impact Too High</Trans>
+                        Price Impact Too High
                       ) : priceImpactSeverity > 2 ? (
-                        <Trans>Swap Anyway</Trans>
+                        Swap Anyway
                       ) : (
-                        <Trans>Swap</Trans>
+                        Swap
                       )}
                     </Text>
                   </ButtonError>

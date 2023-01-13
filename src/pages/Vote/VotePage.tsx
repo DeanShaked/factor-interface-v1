@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { Trans } from '@lingui/macro'
+
 import { Trace } from '@uniswap/analytics'
 import { InterfacePageName } from '@uniswap/analytics-events'
 import { CurrencyAmount, Fraction, Token } from '@uniswap/sdk-core'
@@ -283,16 +283,16 @@ export default function VotePage() {
           <DelegateModal
             isOpen={showDelegateModal}
             onDismiss={toggleDelegateModal}
-            title={<Trans>Unlock Votes</Trans>}
+            title={Unlock Votes}
           />
           <QueueModal isOpen={showQueueModal} onDismiss={toggleQueueModal} proposalId={proposalData?.id} />
           <ExecuteModal isOpen={showExecuteModal} onDismiss={toggleExecuteModal} proposalId={proposalData?.id} />
           <ProposalInfo gap="lg" justify="start">
             <RowBetween style={{ width: '100%' }}>
               <ArrowWrapper to="/vote">
-                <Trans>
+                
                   <ArrowLeft size={20} /> All Proposals
-                </Trans>
+                
               </ArrowWrapper>
               {proposalData && <ProposalStatus status={proposalData.status} />}
             </RowBetween>
@@ -303,7 +303,7 @@ export default function VotePage() {
               <RowBetween>
                 <ThemedText.DeprecatedMain>
                   {startDate && startDate > now ? (
-                    <Trans>Voting starts approximately {startDate.toLocaleString(locale, dateFormat)}</Trans>
+                    Voting starts approximately {startDate.toLocaleString(locale, dateFormat)}
                   ) : null}
                 </ThemedText.DeprecatedMain>
               </RowBetween>
@@ -311,25 +311,25 @@ export default function VotePage() {
                 <ThemedText.DeprecatedMain>
                   {endDate &&
                     (endDate < now ? (
-                      <Trans>Voting ended {endDate.toLocaleString(locale, dateFormat)}</Trans>
+                      Voting ended {endDate.toLocaleString(locale, dateFormat)}
                     ) : (
-                      <Trans>Voting ends approximately {endDate.toLocaleString(locale, dateFormat)}</Trans>
+                      Voting ends approximately {endDate.toLocaleString(locale, dateFormat)}
                     ))}
                 </ThemedText.DeprecatedMain>
               </RowBetween>
               {proposalData && proposalData.status === ProposalState.ACTIVE && !showVotingButtons && (
                 <GrayCard>
                   <ThemedText.DeprecatedBlack>
-                    <Trans>
+                    
                       Only UNI votes that were self delegated or delegated to another address before block{' '}
                       {proposalData.startBlock} are eligible for voting.
-                    </Trans>{' '}
+                    {' '}
                     {showLinkForUnlock && (
                       <span>
-                        <Trans>
+                        
                           <StyledInternalLink to="/vote">Unlock voting</StyledInternalLink> to prepare for the next
                           proposal.
-                        </Trans>
+                        
                       </span>
                     )}
                   </ThemedText.DeprecatedBlack>
@@ -346,7 +346,7 @@ export default function VotePage() {
                     toggleVoteModal()
                   }}
                 >
-                  <Trans>Vote For</Trans>
+                  Vote For
                 </ButtonPrimary>
                 <ButtonPrimary
                   padding="8px"
@@ -356,7 +356,7 @@ export default function VotePage() {
                     toggleVoteModal()
                   }}
                 >
-                  <Trans>Vote Against</Trans>
+                  Vote Against
                 </ButtonPrimary>
               </RowFixed>
             )}
@@ -369,7 +369,7 @@ export default function VotePage() {
                     toggleQueueModal()
                   }}
                 >
-                  <Trans>Queue</Trans>
+                  Queue
                 </ButtonPrimary>
               </RowFixed>
             )}
@@ -378,7 +378,7 @@ export default function VotePage() {
                 {eta && (
                   <RowBetween>
                     <ThemedText.DeprecatedBlack>
-                      <Trans>This proposal may be executed after {eta.toLocaleString(locale, dateFormat)}.</Trans>
+                      This proposal may be executed after {eta.toLocaleString(locale, dateFormat)}.
                     </ThemedText.DeprecatedBlack>
                   </RowBetween>
                 )}
@@ -392,7 +392,7 @@ export default function VotePage() {
                     // can't execute until the eta has arrived
                     disabled={!currentTimestamp || !proposalData?.eta || currentTimestamp.lt(proposalData.eta)}
                   >
-                    <Trans>Execute</Trans>
+                    Execute
                   </ButtonPrimary>
                 </RowFixed>
               </>
@@ -403,7 +403,7 @@ export default function VotePage() {
                   <AutoColumn gap="md">
                     <WrapSmall>
                       <ThemedText.DeprecatedBlack fontWeight={600}>
-                        <Trans>For</Trans>
+                        For
                       </ThemedText.DeprecatedBlack>
                       {proposalData && (
                         <ThemedText.DeprecatedBlack fontWeight={600}>
@@ -432,7 +432,7 @@ export default function VotePage() {
                   <AutoColumn gap="md">
                     <WrapSmall>
                       <ThemedText.DeprecatedBlack fontWeight={600}>
-                        <Trans>Against</Trans>
+                        Against
                       </ThemedText.DeprecatedBlack>
                       {proposalData && (
                         <ThemedText.DeprecatedBlack fontWeight={600}>
@@ -454,7 +454,7 @@ export default function VotePage() {
             </CardWrapper>
             <AutoColumn gap="md">
               <ThemedText.DeprecatedMediumHeader fontWeight={600}>
-                <Trans>Details</Trans>
+                Details
               </ThemedText.DeprecatedMediumHeader>
               {proposalData?.details?.map((d, i) => {
                 return (
@@ -475,7 +475,7 @@ export default function VotePage() {
             </AutoColumn>
             <AutoColumn gap="md">
               <ThemedText.DeprecatedMediumHeader fontWeight={600}>
-                <Trans>Description</Trans>
+                Description
               </ThemedText.DeprecatedMediumHeader>
               <MarkDownWrapper>
                 <ReactMarkdown
@@ -488,7 +488,7 @@ export default function VotePage() {
             </AutoColumn>
             <AutoColumn gap="md">
               <ThemedText.DeprecatedMediumHeader fontWeight={600}>
-                <Trans>Proposer</Trans>
+                Proposer
               </ThemedText.DeprecatedMediumHeader>
               <ProposerAddressLink
                 href={

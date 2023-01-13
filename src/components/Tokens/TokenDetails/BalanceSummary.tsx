@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { formatCurrencyAmount, NumberType } from '@uniswap/conedison/format'
 import { Currency, SupportedChainId } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
@@ -78,7 +78,7 @@ export default function BalanceSummary({ token }: { token: Currency }) {
     <BalancesCard>
       <BalanceSection>
         <ThemedText.SubHeaderSmall color={theme.textPrimary}>
-          <Trans>Your balance on {label}</Trans>
+          Your balance on {label}
         </ThemedText.SubHeaderSmall>
         <BalanceRow>
           <CurrencyLogo currency={token} size="2rem" />

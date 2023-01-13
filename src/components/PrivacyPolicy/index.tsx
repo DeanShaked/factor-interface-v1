@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { sendEvent } from 'components/analytics'
 import Card, { DarkGrayCard } from 'components/Card'
 import Row, { AutoRow, RowBetween } from 'components/Row'
@@ -49,33 +49,33 @@ const StyledLinkOut = styled(ArrowDown)`
 const EXTERNAL_APIS = [
   {
     name: 'Auto Router',
-    description: <Trans>The app fetches the optimal trade route from a Uniswap Labs server.</Trans>,
+    description: "The app fetches the optimal trade route from a Uniswap Labs server.,"
   },
   {
     name: 'Infura',
-    description: <Trans>The app fetches on-chain data and constructs contract calls with an Infura API.</Trans>,
+    description: "The app fetches on-chain data and constructs contract calls with an Infura API.",
   },
   {
     name: 'TRM Labs',
     description: (
       <>
-        <Trans>
+        
           The app securely collects your wallet address and shares it with TRM Labs Inc. for risk and compliance
           reasons.
-        </Trans>{' '}
+        {' '}
         <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
-          <Trans>Learn more</Trans>
+          Learn more
         </ExternalLink>
       </>
     ),
   },
   {
     name: 'Google Analytics & Amplitude',
-    description: <Trans>The app logs anonymized usage statistics in order to improve over time.</Trans>,
+    description: "The app logs anonymized usage statistics in order to improve over time.",
   },
   {
     name: 'The Graph',
-    description: <Trans>The app fetches blockchain data from The Graph’s hosted service.</Trans>,
+    description: "The app fetches blockchain data from The Graph’s hosted service.",
   },
 ]
 
@@ -98,7 +98,7 @@ export function PrivacyPolicyModal() {
       <AutoColumn gap="md" ref={node as any}>
         <RowBetween padding="1rem 1rem 0.5rem 1rem">
           <ThemedText.DeprecatedMediumHeader>
-            <Trans>Legal & Privacy</Trans>
+            Legal & Privacy
           </ThemedText.DeprecatedMediumHeader>
           <HoverText onClick={() => toggle()}>
             <X size={24} />
@@ -129,7 +129,7 @@ function PrivacyPolicy() {
                 <AutoRow gap="4px">
                   <Info size={20} />
                   <ThemedText.DeprecatedMain fontSize={14} color="accentAction">
-                    <Trans>Uniswap Labs&apos; Terms of Service</Trans>
+                    Uniswap Labs&apos; Terms of Service
                   </ThemedText.DeprecatedMain>
                 </AutoRow>
                 <StyledLinkOut size={20} />
@@ -142,7 +142,7 @@ function PrivacyPolicy() {
                 <AutoRow gap="4px">
                   <Info size={20} />
                   <ThemedText.DeprecatedMain fontSize={14} color="accentAction">
-                    <Trans>Privacy Policy</Trans>
+                    Privacy Policy
                   </ThemedText.DeprecatedMain>
                 </AutoRow>
                 <StyledLinkOut size={20} />
@@ -151,7 +151,7 @@ function PrivacyPolicy() {
           </StyledExternalCard>
         </AutoColumn>
         <ThemedText.DeprecatedMain fontSize={14}>
-          <Trans>This app uses the following third-party APIs:</Trans>
+          This app uses the following third-party APIs:
         </ThemedText.DeprecatedMain>
         <AutoColumn gap="md">
           {EXTERNAL_APIS.map(({ name, description }, i) => (
@@ -170,7 +170,7 @@ function PrivacyPolicy() {
           <ThemedText.DeprecatedBody fontSize={12}>
             <Row justify="center" marginBottom="1rem">
               <ExternalLink href="https://help.uniswap.org/en/articles/5675203-terms-of-service-faq">
-                <Trans>Learn more</Trans>
+                Learn more
               </ExternalLink>
             </Row>
           </ThemedText.DeprecatedBody>

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { FeeAmount } from '@uniswap/v3-sdk'
 import { ButtonGray } from 'components/Button'
 import { OutlineCard } from 'components/Card'
@@ -176,9 +176,9 @@ const StepCounter = ({
         </InputRow>
 
         <InputTitle fontSize={12} textAlign="center">
-          <Trans>
+          
             {tokenB} per {tokenA}
-          </Trans>
+          
         </InputTitle>
       </AutoColumn>
     </FocusedOutlineCard>

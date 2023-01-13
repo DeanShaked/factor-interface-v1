@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Currency, Percent, Price } from '@uniswap/sdk-core'
 import { Text } from 'rebass'
 import { useTheme } from 'styled-components/macro'
@@ -27,17 +27,17 @@ export function PoolPriceBar({
         <AutoColumn justify="center">
           <ThemedText.DeprecatedBlack>{price?.toSignificant(6) ?? '-'}</ThemedText.DeprecatedBlack>
           <Text fontWeight={500} fontSize={14} color={theme.textSecondary} pt={1}>
-            <Trans>
+            
               {currencies[Field.CURRENCY_B]?.symbol} per {currencies[Field.CURRENCY_A]?.symbol}
-            </Trans>
+            
           </Text>
         </AutoColumn>
         <AutoColumn justify="center">
           <ThemedText.DeprecatedBlack>{price?.invert()?.toSignificant(6) ?? '-'}</ThemedText.DeprecatedBlack>
           <Text fontWeight={500} fontSize={14} color={theme.textSecondary} pt={1}>
-            <Trans>
+            
               {currencies[Field.CURRENCY_A]?.symbol} per {currencies[Field.CURRENCY_B]?.symbol}
-            </Trans>
+            
           </Text>
         </AutoColumn>
         <AutoColumn justify="center">
@@ -48,7 +48,7 @@ export function PoolPriceBar({
             %
           </ThemedText.DeprecatedBlack>
           <Text fontWeight={500} fontSize={14} color={theme.textSecondary} pt={1}>
-            <Trans>Share of Pool</Trans>
+            Share of Pool
           </Text>
         </AutoColumn>
       </AutoRow>

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { OpacityHoverState, ScrollBarStyles } from 'components/Common'
 import { LoadingBubble } from 'components/Tokens/loading'
 import { EventCell, MarketplaceIcon } from 'nft/components/collection/ActivityCells'
@@ -97,19 +97,19 @@ const ActivityTable = ({ children }: { children: ReactNode }) => {
         <thead>
           <TR>
             <TH>
-              <Trans>Event</Trans>
+              Event
             </TH>
             <TH>
-              <Trans>Price</Trans>
+              Price
             </TH>
             <TH>
-              <Trans>By</Trans>
+              By
             </TH>
             <TH>
-              <Trans>To</Trans>
+              To
             </TH>
             <TH>
-              <Trans>Time</Trans>
+              Time
             </TH>
           </TR>
         </thead>

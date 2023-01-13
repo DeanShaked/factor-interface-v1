@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Currency, CurrencyAmount, Percent, Token } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
@@ -124,11 +124,11 @@ export function useDerivedBurnInfo(
 
   let error: ReactNode | undefined
   if (!account) {
-    error = <Trans>Connect Wallet</Trans>
+    error = Connect Wallet
   }
 
   if (!parsedAmounts[Field.LIQUIDITY] || !parsedAmounts[Field.CURRENCY_A] || !parsedAmounts[Field.CURRENCY_B]) {
-    error = error ?? <Trans>Enter an amount</Trans>
+    error = error ?? Enter an amount
   }
 
   return { pair, parsedAmounts, error }

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { TraceEvent } from '@uniswap/analytics'
 import { BrowserEvent, InterfaceElementName, InterfaceEventName } from '@uniswap/analytics-events'
 import searchIcon from 'assets/svg/search.svg'
@@ -95,7 +95,7 @@ export default function SearchBar() {
         )}
       >
         Filter tokens
-      </Trans>
+      
     </SearchBarContainer>
   )
 }

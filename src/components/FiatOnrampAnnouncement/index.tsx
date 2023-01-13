@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { sendAnalyticsEvent } from '@uniswap/analytics'
 import { InterfaceEventName } from '@uniswap/analytics-events'
 import { useWeb3React } from '@web3-react/core'
@@ -138,10 +138,10 @@ export function FiatOnrampAnnouncement() {
       <CloseIcon onClick={handleClose} data-testid="FiatOnrampAnnouncement-close" />
       <Wrapper onClick={handleClick}>
         <Header>
-          <Trans>Buy crypto</Trans>
+          Buy crypto
         </Header>
         <Body>
-          <Trans>Get tokens at the best prices in web3 on Uniswap, powered by Moonpay.</Trans>
+          Get tokens at the best prices in web3 on Uniswap, powered by Moonpay.
         </Body>
       </Wrapper>
     </ArrowWrapper>

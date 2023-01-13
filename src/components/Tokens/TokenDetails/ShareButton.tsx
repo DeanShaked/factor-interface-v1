@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Currency } from '@uniswap/sdk-core'
 import { NATIVE_CHAIN_ID } from 'constants/tokens'
 import { chainIdToBackendName } from 'graphql/data/util'
@@ -102,13 +102,13 @@ export default function ShareButton({ currency }: { currency: Currency }) {
               toCopy={window.location.href}
               ref={copyHelperRef}
             >
-              <Trans>Copy Link</Trans>
+              Copy Link
             </CopyHelper>
           </ShareAction>
 
           <ShareAction onClick={shareTweet}>
             <Twitter color={theme.textPrimary} size={20} strokeWidth={1.5} />
-            <Trans>Share to Twitter</Trans>
+            Share to Twitter
           </ShareAction>
         </ShareActions>
       )}

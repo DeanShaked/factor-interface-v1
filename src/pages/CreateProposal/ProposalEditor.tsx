@@ -54,7 +54,7 @@ Insert your conclusion here
   return (
     <ProposalEditorContainer className={className}>
       <ProposalEditorHeader>
-        <Trans>Proposal</Trans>
+        Proposal
       </ProposalEditorHeader>
       <ProposalTitle value={title} onUserInput={onTitleInput} placeholder={t`Proposal Title`} fontSize="1.25rem" />
       <hr />

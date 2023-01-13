@@ -183,7 +183,7 @@ export const ListPage = () => {
         <>
           <FloatingConfirmationBar>
             <ThemedText.HeadlineSmall lineHeight="28px">
-              <Trans>Proceeds if sold</Trans>
+              Proceeds if sold
             </ThemedText.HeadlineSmall>
             <ProceedsAndButtonWrapper>
               <ProceedsWrapper>

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import Column from 'components/Column'
 import Row from 'components/Row'
 import { AttachPriceIcon, EditPriceIcon } from 'nft/components/icons'
@@ -73,10 +73,10 @@ const getWarningMessage = (warning: WarningType) => {
   let message = <></>
   switch (warning) {
     case WarningType.BELOW_FLOOR:
-      message = <Trans>LISTING BELOW FLOOR </Trans>
+      message = LISTING BELOW FLOOR 
       break
     case WarningType.ALREADY_LISTED:
-      message = <Trans>ALREADY LISTED FOR </Trans>
+      message = ALREADY LISTED FOR 
       break
   }
   return message
@@ -182,7 +182,7 @@ export const PriceTextInput = ({
                     setWarningType(WarningType.NONE)
                   }}
                 >
-                  {warningType === WarningType.BELOW_FLOOR ? <Trans>DISMISS</Trans> : <Trans>REMOVE ITEM</Trans>}
+                  {warningType === WarningType.BELOW_FLOOR ? DISMISS : REMOVE ITEM}
                 </WarningAction>
               </>
             )}

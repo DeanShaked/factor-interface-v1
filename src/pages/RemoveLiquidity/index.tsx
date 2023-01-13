@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { Contract } from '@ethersproject/contracts'
 import type { TransactionResponse } from '@ethersproject/providers'
-import { Trans } from '@lingui/macro'
+
 import { TraceEvent } from '@uniswap/analytics'
 import { BrowserEvent, InterfaceElementName, InterfaceEventName } from '@uniswap/analytics-events'
 import { Currency, Percent } from '@uniswap/sdk-core'
@@ -318,10 +318,10 @@ export default function RemoveLiquidity() {
         </RowBetween>
 
         <ThemedText.DeprecatedItalic fontSize={12} color={theme.textSecondary} textAlign="left" padding="12px 0 0 0">
-          <Trans>
+          
             Output is estimated. If the price changes by more than {allowedSlippage.toSignificant(4)}% your transaction
             will revert.
-          </Trans>
+          
         </ThemedText.DeprecatedItalic>
       </AutoColumn>
     )
@@ -332,9 +332,9 @@ export default function RemoveLiquidity() {
       <>
         <RowBetween>
           <Text color={theme.textSecondary} fontWeight={500} fontSize={16}>
-            <Trans>
+            
               UNI {currencyA?.symbol}/{currencyB?.symbol} Burned
-            </Trans>
+            
           </Text>
           <RowFixed>
             <DoubleCurrencyLogo currency0={currencyA} currency1={currencyB} margin={true} />
@@ -347,7 +347,7 @@ export default function RemoveLiquidity() {
           <>
             <RowBetween>
               <Text color={theme.textSecondary} fontWeight={500} fontSize={16}>
-                <Trans>Price</Trans>
+                Price
               </Text>
               <Text fontWeight={500} fontSize={16} color={theme.textPrimary}>
                 1 {currencyA?.symbol} = {tokenA ? pair.priceOf(tokenA).toSignificant(6) : '-'} {currencyB?.symbol}
@@ -363,7 +363,7 @@ export default function RemoveLiquidity() {
         )}
         <ButtonPrimary disabled={!(approval === ApprovalState.APPROVED || signatureData !== null)} onClick={onRemove}>
           <Text fontWeight={500} fontSize={20}>
-            <Trans>Confirm</Trans>
+            Confirm
           </Text>
         </ButtonPrimary>
       </>
@@ -371,10 +371,10 @@ export default function RemoveLiquidity() {
   }
 
   const pendingText = (
-    <Trans>
+    
       Removing {parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} {currencyA?.symbol} and
       {parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} {currencyB?.symbol}
-    </Trans>
+    
   )
 
   const liquidityPercentChangeCallback = useCallback(
@@ -440,7 +440,7 @@ export default function RemoveLiquidity() {
             hash={txHash ? txHash : ''}
             content={() => (
               <ConfirmationModalContent
-                title={<Trans>You will receive</Trans>}
+                title={You will receive}
                 onDismiss={handleDismissConfirmation}
                 topContent={modalHeader}
                 bottomContent={modalBottom}
@@ -452,10 +452,10 @@ export default function RemoveLiquidity() {
             <BlueCard>
               <AutoColumn gap="10px">
                 <ThemedText.DeprecatedLink fontWeight={400} color="accentAction">
-                  <Trans>
+                  
                     <b>Tip:</b> Removing pool tokens converts your position back into underlying tokens at the current
                     rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive.
-                  </Trans>
+                  
                 </ThemedText.DeprecatedLink>
               </AutoColumn>
             </BlueCard>
@@ -463,7 +463,7 @@ export default function RemoveLiquidity() {
               <AutoColumn gap="20px">
                 <RowBetween>
                   <Text fontWeight={500}>
-                    <Trans>Remove Amount</Trans>
+                    Remove Amount
                   </Text>
                   <ClickableText
                     fontWeight={500}
@@ -471,7 +471,7 @@ export default function RemoveLiquidity() {
                       setShowDetailed(!showDetailed)
                     }}
                   >
-                    {showDetailed ? <Trans>Simple</Trans> : <Trans>Detailed</Trans>}
+                    {showDetailed ? Simple : Detailed}
                   </ClickableText>
                 </RowBetween>
                 <Row style={{ alignItems: 'flex-end' }}>
@@ -609,7 +609,7 @@ export default function RemoveLiquidity() {
             {pair && (
               <div style={{ padding: '10px 20px' }}>
                 <RowBetween>
-                  <Trans>Price:</Trans>
+                  Price:
                   <div>
                     1 {currencyA?.symbol} = {tokenA ? pair.priceOf(tokenA).toSignificant(6) : '-'} {currencyB?.symbol}
                   </div>
@@ -631,7 +631,7 @@ export default function RemoveLiquidity() {
                   element={InterfaceElementName.CONNECT_WALLET_BUTTON}
                 >
                   <ButtonLight onClick={toggleWalletModal}>
-                    <Trans>Connect Wallet</Trans>
+                    Connect Wallet
                   </ButtonLight>
                 </TraceEvent>
               ) : (
@@ -646,12 +646,12 @@ export default function RemoveLiquidity() {
                   >
                     {approval === ApprovalState.PENDING ? (
                       <Dots>
-                        <Trans>Approving</Trans>
+                        Approving
                       </Dots>
                     ) : approval === ApprovalState.APPROVED || signatureData !== null ? (
-                      <Trans>Approved</Trans>
+                      Approved
                     ) : (
-                      <Trans>Approve</Trans>
+                      Approve
                     )}
                   </ButtonConfirmed>
                   <ButtonError
@@ -662,7 +662,7 @@ export default function RemoveLiquidity() {
                     error={!isValid && !!parsedAmounts[Field.CURRENCY_A] && !!parsedAmounts[Field.CURRENCY_B]}
                   >
                     <Text fontSize={16} fontWeight={500}>
-                      {error || <Trans>Remove</Trans>}
+                      {error || Remove}
                     </Text>
                   </ButtonError>
                 </RowBetween>

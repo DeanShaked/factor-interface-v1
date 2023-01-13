@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import FeatureFlagModal from 'components/FeatureFlagModal/FeatureFlagModal'
 import { PrivacyPolicyModal } from 'components/PrivacyPolicy'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
@@ -140,7 +140,7 @@ export const MenuDropdown = () => {
                     <GovernanceIcon width={24} height={24} />
                   </Icon>
                   <PrimaryMenuRow.Text>
-                    <Trans>Vote in governance</Trans>
+                    Vote in governance
                   </PrimaryMenuRow.Text>
                 </PrimaryMenuRow>
                 <PrimaryMenuRow href="https://info.uniswap.org/#/">
@@ -148,7 +148,7 @@ export const MenuDropdown = () => {
                     <BarChartIcon width={24} height={24} />
                   </Icon>
                   <PrimaryMenuRow.Text>
-                    <Trans>View more analytics</Trans>
+                    View more analytics
                   </PrimaryMenuRow.Text>
                 </PrimaryMenuRow>
               </Column>
@@ -161,10 +161,10 @@ export const MenuDropdown = () => {
                 paddingX="8"
               >
                 <SecondaryLinkedText href="https://help.uniswap.org/en/">
-                  <Trans>Help center</Trans> ↗
+                  Help center ↗
                 </SecondaryLinkedText>
                 <SecondaryLinkedText href="https://docs.uniswap.org/">
-                  <Trans>Documentation</Trans> ↗
+                  Documentation ↗
                 </SecondaryLinkedText>
                 <SecondaryLinkedText
                   onClick={() => {
@@ -172,11 +172,11 @@ export const MenuDropdown = () => {
                     togglePrivacyPolicy()
                   }}
                 >
-                  <Trans>Legal & Privacy</Trans> ↗
+                  Legal & Privacy ↗
                 </SecondaryLinkedText>
                 {(isDevelopmentEnv() || isStagingEnv()) && (
                   <SecondaryLinkedText onClick={openFeatureFlagsModal}>
-                    <Trans>Feature Flags</Trans>
+                    Feature Flags
                   </SecondaryLinkedText>
                 )}
               </Box>

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { useWeb3React } from '@web3-react/core'
 import { SupportedChainId } from 'constants/chains'
 import styled from 'styled-components/macro'
@@ -41,20 +41,20 @@ export default function ProposalEmptyState() {
   if (chainId && chainId !== SupportedChainId.MAINNET) {
     return (
       <EmptyState
-        HeaderContent={() => <Trans>Please connect to Layer 1 Ethereum</Trans>}
+        HeaderContent={() => Please connect to Layer 1 Ethereum}
         SubHeaderContent={() => (
-          <Trans>
+          
             Uniswap governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals
             and Vote.
-          </Trans>
+          
         )}
       />
     )
   }
   return (
     <EmptyState
-      HeaderContent={() => <Trans>No proposals found.</Trans>}
-      SubHeaderContent={() => <Trans>Proposals submitted by community members will appear here.</Trans>}
+      HeaderContent={() => No proposals found.}
+      SubHeaderContent={() => Proposals submitted by community members will appear here.}
     />
   )
 }

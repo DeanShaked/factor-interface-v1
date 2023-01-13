@@ -189,7 +189,7 @@ export function CurrencySearch({
         <PaddedColumn gap="16px">
           <RowBetween>
             <Text fontWeight={500} fontSize={16}>
-              <Trans>Select a token</Trans>
+              Select a token
             </Text>
             <CloseIcon onClick={onDismiss} />
           </RowBetween>
@@ -256,7 +256,7 @@ export function CurrencySearch({
         ) : (
           <Column style={{ padding: '20px', height: '100%' }}>
             <ThemedText.DeprecatedMain color={theme.textTertiary} textAlign="center" mb="20px">
-              <Trans>No results found.</Trans>
+              No results found.
             </ThemedText.DeprecatedMain>
           </Column>
         )}

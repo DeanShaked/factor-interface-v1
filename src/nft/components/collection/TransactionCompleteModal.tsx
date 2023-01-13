@@ -1,5 +1,5 @@
 import { formatEther } from '@ethersproject/units'
-import { Trans } from '@lingui/macro'
+
 import { Trace, useTrace } from '@uniswap/analytics'
 import { InterfaceModalName, NFTEventName } from '@uniswap/analytics-events'
 import clsx from 'clsx'
@@ -124,10 +124,10 @@ const TxCompleteModal = () => {
                   <UniIcon color={vars.color.pink400} width="36" height="36" className={styles.uniLogo} />
                   <Box display="flex" flexWrap="wrap" width="full" height="min">
                     <h1 className={styles.title}>
-                      <Trans>Complete!</Trans>
+                      Complete!
                     </h1>
                     <p className={styles.subHeading}>
-                      <Trans>Uniswap has granted your wish!</Trans>
+                      Uniswap has granted your wish!
                     </p>
                   </Box>
                   <UploadLink onClick={shareTweet} target="_blank">
@@ -177,7 +177,7 @@ const TxCompleteModal = () => {
                     </Row>
                     <a href={txHashUrl} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
                       <Box color="textSecondary" fontWeight="normal">
-                        <Trans>View on Etherscan</Trans>
+                        View on Etherscan
                       </Box>
                     </a>
                   </Box>

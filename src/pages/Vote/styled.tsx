@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import styled, { DefaultTheme } from 'styled-components/macro'
 
 import { ProposalState } from '../../state/governance/hooks'
@@ -24,23 +24,23 @@ const handleColorType = (status: ProposalState, theme: DefaultTheme) => {
 function StatusText({ status }: { status: ProposalState }) {
   switch (status) {
     case ProposalState.PENDING:
-      return <Trans>Pending</Trans>
+      return Pending
     case ProposalState.ACTIVE:
-      return <Trans>Active</Trans>
+      return Active
     case ProposalState.SUCCEEDED:
-      return <Trans>Succeeded</Trans>
+      return Succeeded
     case ProposalState.EXECUTED:
-      return <Trans>Executed</Trans>
+      return Executed
     case ProposalState.DEFEATED:
-      return <Trans>Defeated</Trans>
+      return Defeated
     case ProposalState.QUEUED:
-      return <Trans>Queued</Trans>
+      return Queued
     case ProposalState.CANCELED:
-      return <Trans>Canceled</Trans>
+      return Canceled
     case ProposalState.EXPIRED:
-      return <Trans>Expired</Trans>
+      return Expired
     default:
-      return <Trans>Undetermined</Trans>
+      return Undetermined
   }
 }
 

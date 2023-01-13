@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { TraceEvent } from '@uniswap/analytics'
 import { BrowserEvent, InterfaceElementName, SwapEventName } from '@uniswap/analytics-events'
 import { Currency, CurrencyAmount, Percent, Token, TradeType } from '@uniswap/sdk-core'
@@ -153,7 +153,7 @@ export default function SwapModalFooter({
             id={InterfaceElementName.CONFIRM_SWAP_BUTTON}
           >
             <Text fontSize={20} fontWeight={500}>
-              <Trans>Confirm Swap</Trans>
+              Confirm Swap
             </Text>
           </ButtonError>
         </TraceEvent>

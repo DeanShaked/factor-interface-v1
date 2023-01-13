@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Percent, Price, Token } from '@uniswap/sdk-core'
 import { Position } from '@uniswap/v3-sdk'
 import Badge from 'components/Badge'
@@ -218,7 +218,7 @@ export default function PositionListItem({ positionDetails }: PositionListItemPr
           &nbsp;
           <Badge>
             <BadgeText>
-              <Trans>{new Percent(feeAmount, 1_000_000).toSignificant()}%</Trans>
+              {new Percent(feeAmount, 1_000_000).toSignificant()}%
             </BadgeText>
           </Badge>
         </PrimaryPositionIdData>
@@ -229,16 +229,16 @@ export default function PositionListItem({ positionDetails }: PositionListItemPr
         <RangeLineItem>
           <RangeText>
             <ExtentsText>
-              <Trans>Min: </Trans>
+              Min: 
             </ExtentsText>
-            <Trans>
+            
               {formatTickPrice({
                 price: priceLower,
                 atLimit: tickAtLimit,
                 direction: Bound.LOWER,
               })}{' '}
               <HoverInlineText text={currencyQuote?.symbol} /> per <HoverInlineText text={currencyBase?.symbol ?? ''} />
-            </Trans>
+            
           </RangeText>{' '}
           <HideSmall>
             <DoubleArrow>⟷</DoubleArrow>{' '}
@@ -248,9 +248,9 @@ export default function PositionListItem({ positionDetails }: PositionListItemPr
           </SmallOnly>
           <RangeText>
             <ExtentsText>
-              <Trans>Max:</Trans>
+              Max:
             </ExtentsText>
-            <Trans>
+            
               {formatTickPrice({
                 price: priceUpper,
                 atLimit: tickAtLimit,
@@ -258,7 +258,7 @@ export default function PositionListItem({ positionDetails }: PositionListItemPr
               })}{' '}
               <HoverInlineText text={currencyQuote?.symbol} /> per{' '}
               <HoverInlineText maxCharacters={10} text={currencyBase?.symbol} />
-            </Trans>
+            
           </RangeText>
         </RangeLineItem>
       ) : (

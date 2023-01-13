@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { Trans } from '@lingui/macro'
+
 import { sendAnalyticsEvent, useTrace } from '@uniswap/analytics'
 import { InterfacePageName, NFTEventName } from '@uniswap/analytics-events'
 import { MouseoverTooltip } from 'components/Tooltip'
@@ -135,7 +135,7 @@ export const CollectionAsset = ({
           <Tooltip
             text={
               <Box as="span" className={bodySmall} color="textPrimary">
-                {isSelected ? <Trans>Added to bag</Trans> : <Trans>Removed from bag</Trans>}
+                {isSelected ? Added to bag : Removed from bag}
               </Box>
             }
             show={showTooltip}
@@ -158,7 +158,7 @@ export const CollectionAsset = ({
         <MouseoverTooltip
           text={
             <Box as="span" className={bodySmall} color="textPrimary">
-              <Trans>This item is not for sale</Trans>
+              This item is not for sale
             </Box>
           }
           placement="bottom"

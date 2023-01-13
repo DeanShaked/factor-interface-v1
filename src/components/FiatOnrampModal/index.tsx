@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { useWeb3React } from '@web3-react/core'
 import { useCallback, useEffect, useState } from 'react'
 import { useCloseModal, useModalIsOpen } from 'state/application/hooks'
@@ -124,10 +124,10 @@ export default function FiatOnrampModal() {
         {error ? (
           <>
             <ThemedText.MediumHeader>
-              <Trans>Moonpay Fiat On-ramp iframe</Trans>
+              Moonpay Fiat On-ramp iframe
             </ThemedText.MediumHeader>
             <ErrorText>
-              <Trans>something went wrong!</Trans>
+              something went wrong!
               <br />
               {error}
             </ErrorText>

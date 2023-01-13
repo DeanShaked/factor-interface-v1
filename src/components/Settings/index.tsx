@@ -146,20 +146,20 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
             <RowBetween style={{ padding: '0 2rem' }}>
               <div />
               <Text fontWeight={500} fontSize={20}>
-                <Trans>Are you sure?</Trans>
+                Are you sure?
               </Text>
               <StyledCloseIcon onClick={() => setShowConfirmation(false)} />
             </RowBetween>
             <Break />
             <AutoColumn gap="lg" style={{ padding: '0 2rem' }}>
               <Text fontWeight={500} fontSize={20}>
-                <Trans>
+                
                   Expert mode turns off the confirm transaction prompt and allows high slippage trades that often result
                   in bad rates and lost funds.
-                </Trans>
+                
               </Text>
               <Text fontWeight={600} fontSize={20}>
-                <Trans>ONLY USE THIS MODE IF YOU KNOW WHAT YOU ARE DOING.</Trans>
+                ONLY USE THIS MODE IF YOU KNOW WHAT YOU ARE DOING.
               </Text>
               <ButtonError
                 error={true}
@@ -173,7 +173,7 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
                 }}
               >
                 <Text fontSize={20} fontWeight={500} id="confirm-expert-mode">
-                  <Trans>Turn On Expert Mode</Trans>
+                  Turn On Expert Mode
                 </Text>
               </ButtonError>
             </AutoColumn>
@@ -199,19 +199,19 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
         <MenuFlyout>
           <AutoColumn gap="md" style={{ padding: '1rem' }}>
             <Text fontWeight={600} fontSize={14}>
-              <Trans>Settings</Trans>
+              Settings
             </Text>
             <TransactionSettings placeholderSlippage={placeholderSlippage} />
             <Text fontWeight={600} fontSize={14}>
-              <Trans>Interface Settings</Trans>
+              Interface Settings
             </Text>
             {isSupportedChainId(chainId) && (
               <RowBetween>
                 <RowFixed>
                   <ThemedText.DeprecatedBlack fontWeight={400} fontSize={14} color={theme.textSecondary}>
-                    <Trans>Auto Router API</Trans>
+                    Auto Router API
                   </ThemedText.DeprecatedBlack>
-                  <QuestionHelper text={<Trans>Use the Uniswap Labs API to get faster quotes.</Trans>} />
+                  <QuestionHelper text={Use the Uniswap Labs API to get faster quotes.} />
                 </RowFixed>
                 <Toggle
                   id="toggle-optimized-router-button"
@@ -229,11 +229,11 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
             <RowBetween>
               <RowFixed>
                 <ThemedText.DeprecatedBlack fontWeight={400} fontSize={14} color={theme.textSecondary}>
-                  <Trans>Expert Mode</Trans>
+                  Expert Mode
                 </ThemedText.DeprecatedBlack>
                 <QuestionHelper
                   text={
-                    <Trans>Allow high price impact trades and skip the confirm screen. Use at your own risk.</Trans>
+                    Allow high price impact trades and skip the confirm screen. Use at your own risk.
                   }
                 />
               </RowFixed>

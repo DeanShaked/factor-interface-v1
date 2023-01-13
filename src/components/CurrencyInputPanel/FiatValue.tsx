@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 // eslint-disable-next-line no-restricted-imports
 import { t } from '@lingui/macro'
 import { formatCurrencyAmount, formatPriceImpact, NumberType } from '@uniswap/conedison/format'
@@ -61,7 +61,7 @@ export function FiatValue({
             <span style={{ color: priceImpactColor }}>
               {' '}
               <MouseoverTooltip text={t`The estimated difference between the USD values of input and output amounts.`}>
-                (<Trans>{formatPriceImpact(priceImpact)}</Trans>)
+                ({formatPriceImpact(priceImpact)})
               </MouseoverTooltip>
             </span>
           )}

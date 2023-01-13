@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Currency, CurrencyAmount, Percent, Price, Token } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
@@ -178,25 +178,25 @@ export function useDerivedMintInfo(
 
   let error: ReactNode | undefined
   if (!account) {
-    error = <Trans>Connect Wallet</Trans>
+    error = Connect Wallet
   }
 
   if (pairState === PairState.INVALID) {
-    error = error ?? <Trans>Invalid pair</Trans>
+    error = error ?? Invalid pair
   }
 
   if (!parsedAmounts[Field.CURRENCY_A] || !parsedAmounts[Field.CURRENCY_B]) {
-    error = error ?? <Trans>Enter an amount</Trans>
+    error = error ?? Enter an amount
   }
 
   const { [Field.CURRENCY_A]: currencyAAmount, [Field.CURRENCY_B]: currencyBAmount } = parsedAmounts
 
   if (currencyAAmount && currencyBalances?.[Field.CURRENCY_A]?.lessThan(currencyAAmount)) {
-    error = <Trans>Insufficient {currencies[Field.CURRENCY_A]?.symbol} balance</Trans>
+    error = Insufficient {currencies[Field.CURRENCY_A]?.symbol} balance
   }
 
   if (currencyBAmount && currencyBalances?.[Field.CURRENCY_B]?.lessThan(currencyBAmount)) {
-    error = <Trans>Insufficient {currencies[Field.CURRENCY_B]?.symbol} balance</Trans>
+    error = Insufficient {currencies[Field.CURRENCY_B]?.symbol} balance
   }
 
   return {

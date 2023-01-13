@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Trace } from '@uniswap/analytics'
 import { InterfacePageName } from '@uniswap/analytics-events'
 import { SmallButtonPrimary } from 'components/Button'
@@ -52,13 +52,13 @@ export default function NotFound() {
           <Container>
             <Title>404</Title>
             <Paragraph color="textSecondary">
-              <Trans>Page not found!</Trans>
+              Page not found!
             </Paragraph>
           </Container>
           <Image src={isDarkMode ? darkImage : lightImage} alt="Liluni" />
         </Header>
         <SmallButtonPrimary as={Link} to="/">
-          <Trans>Oops, take me back to Swap</Trans>
+          Oops, take me back to Swap
         </SmallButtonPrimary>
       </Trace>
     </PageWrapper>

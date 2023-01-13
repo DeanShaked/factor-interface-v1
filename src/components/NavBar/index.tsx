@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { useWeb3React } from '@web3-react/core'
 import Web3Status from 'components/Web3Status'
 import { chainIdToBackendName } from 'graphql/data/util'
@@ -62,16 +62,16 @@ export const PageTabs = () => {
   return (
     <>
       <MenuItem href="/swap" isActive={pathname.startsWith('/swap')}>
-        <Trans>Swap</Trans>
+        Swap
       </MenuItem>
       <MenuItem href={`/tokens/${chainName.toLowerCase()}`} isActive={pathname.startsWith('/tokens')}>
-        <Trans>Tokens</Trans>
+        Tokens
       </MenuItem>
       <MenuItem dataTestId="nft-nav" href="/nfts" isActive={isNftPage}>
-        <Trans>NFTs</Trans>
+        NFTs
       </MenuItem>
       <MenuItem href="/pool" id="pool-nav-link" isActive={isPoolActive}>
-        <Trans>Pool</Trans>
+        Pool
       </MenuItem>
     </>
   )

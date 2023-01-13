@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Trace } from '@uniswap/analytics'
 import { InterfacePageName } from '@uniswap/analytics-events'
 import { Currency } from '@uniswap/sdk-core'
@@ -192,8 +192,8 @@ export default function TokenDetails({
                   <CurrencyLogo currency={token} size="32px" />
                   <L2NetworkLogo networkUrl={L2Icon} size="16px" />
                 </LogoContainer>
-                {token.name ?? <Trans>Name not found</Trans>}
-                <TokenSymbol>{token.symbol ?? <Trans>Symbol not found</Trans>}</TokenSymbol>
+                {token.name ?? "Name not found"}
+                <TokenSymbol>{token.symbol ?? "Symbol not found"}</TokenSymbol>
               </TokenNameCell>
               <TokenActions>
                 <ShareButton currency={token} />

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Currency } from '@uniswap/sdk-core'
 import AddressInputPanel from 'components/AddressInputPanel'
 import CurrencyInputPanel from 'components/CurrencyInputPanel'
@@ -42,7 +42,7 @@ export const ProposalActionDetail = ({
     [ProposalAction.TRANSFER_TOKEN]: [
       {
         type: ProposalActionDetailField.ADDRESS,
-        label: <Trans>To</Trans>,
+        label: To,
       },
       {
         type: ProposalActionDetailField.CURRENCY,
@@ -51,7 +51,7 @@ export const ProposalActionDetail = ({
     [ProposalAction.APPROVE_TOKEN]: [
       {
         type: ProposalActionDetailField.ADDRESS,
-        label: <Trans>To</Trans>,
+        label: To,
       },
       {
         type: ProposalActionDetailField.CURRENCY,

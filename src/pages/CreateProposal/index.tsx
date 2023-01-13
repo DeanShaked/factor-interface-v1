@@ -1,6 +1,6 @@
 import { defaultAbiCoder } from '@ethersproject/abi'
 import { getAddress, isAddress } from '@ethersproject/address'
-import { Trans } from '@lingui/macro'
+
 import { Trace } from '@uniswap/analytics'
 import { InterfacePageName } from '@uniswap/analytics-events'
 import { Currency, CurrencyAmount, Token } from '@uniswap/sdk-core'
@@ -73,17 +73,17 @@ const CreateProposalButton = ({
       onClick={handleCreateProposal}
     >
       {hasActiveOrPendingProposal ? (
-        <Trans>You already have an active or pending proposal</Trans>
+        You already have an active or pending proposal
       ) : !hasEnoughVote ? (
         <>
           {formattedProposalThreshold ? (
-            <Trans>You must have {formattedProposalThreshold} votes to submit a proposal</Trans>
+            You must have {formattedProposalThreshold} votes to submit a proposal
           ) : (
-            <Trans>You don&apos;t have enough votes to submit a proposal</Trans>
+            You don&apos;t have enough votes to submit a proposal
           )}
         </>
       ) : (
-        <Trans>Create Proposal</Trans>
+        Create Proposal
       )}
     </ButtonError>
   )
@@ -247,7 +247,7 @@ ${bodyValue}
             <BlueCard>
               <AutoColumn gap="10px">
                 <ThemedText.DeprecatedLink fontWeight={400} color="accentAction">
-                  <Trans>
+                  
                     <strong>Tip:</strong> Select an action and describe your proposal for the community. The proposal
                     cannot be modified after submission, so please verify all information before submitting. The voting
                     period will begin immediately and last for 7 days. To propose a custom action,{' '}
@@ -255,7 +255,7 @@ ${bodyValue}
                       read the docs
                     </ExternalLink>
                     .
-                  </Trans>
+                  
                 </ThemedText.DeprecatedLink>
               </AutoColumn>
             </BlueCard>

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { useTrace } from '@uniswap/analytics'
 import { sendAnalyticsEvent } from '@uniswap/analytics'
 import { NFTEventName } from '@uniswap/analytics-events'
@@ -41,9 +41,9 @@ const getNftDisplayComponent = (
 const getUnsupportedNftTextComponent = (asset: WalletAsset) => (
   <Box as="span" className={bodySmall} style={{ color: themeVars.colors.textPrimary }}>
     {asset.asset_contract.tokenType === NftStandard.Erc1155 ? (
-      <Trans>Selling ERC-1155s coming soon</Trans>
+      Selling ERC-1155s coming soon
     ) : (
-      <Trans>Blocked from trading</Trans>
+      Blocked from trading
     )}
   </Box>
 )
@@ -125,7 +125,7 @@ export const ViewMyNftsAsset = ({
         <Tooltip
           text={
             <Box as="span" className={bodySmall} color="textPrimary">
-              {isSelected ? <Trans>Added to bag</Trans> : <Trans>Removed from bag</Trans>}
+              {isSelected ? Added to bag : Removed from bag}
             </Box>
           }
           show={showTooltip}

@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { useWeb3React } from '@web3-react/core'
 import { useState } from 'react'
 import { ArrowUpCircle, X } from 'react-feather'
@@ -82,18 +82,18 @@ export default function QueueModal({ isOpen, onDismiss, proposalId }: QueueModal
           <AutoColumn gap="lg" justify="center">
             <RowBetween>
               <ThemedText.DeprecatedMediumHeader fontWeight={500}>
-                <Trans>Queue Proposal {proposalId}</Trans>
+                Queue Proposal {proposalId}
               </ThemedText.DeprecatedMediumHeader>
               <StyledClosed onClick={wrappedOnDismiss} />
             </RowBetween>
             <RowBetween>
               <ThemedText.DeprecatedBody>
-                <Trans>Adding this proposal to the queue will allow it to be executed, after a delay.</Trans>
+                Adding this proposal to the queue will allow it to be executed, after a delay.
               </ThemedText.DeprecatedBody>
             </RowBetween>
             <ButtonPrimary onClick={onQueue}>
               <ThemedText.DeprecatedMediumHeader color="white">
-                <Trans>Queue</Trans>
+                Queue
               </ThemedText.DeprecatedMediumHeader>
             </ButtonPrimary>
           </AutoColumn>
@@ -111,11 +111,11 @@ export default function QueueModal({ isOpen, onDismiss, proposalId }: QueueModal
           <AutoColumn gap="100px" justify="center">
             <AutoColumn gap="md" justify="center">
               <ThemedText.DeprecatedLargeHeader>
-                <Trans>Queueing</Trans>
+                Queueing
               </ThemedText.DeprecatedLargeHeader>
             </AutoColumn>
             <ThemedText.DeprecatedSubHeader>
-              <Trans>Confirm this transaction in your wallet</Trans>
+              Confirm this transaction in your wallet
             </ThemedText.DeprecatedSubHeader>
           </AutoColumn>
         </ConfirmOrLoadingWrapper>
@@ -132,7 +132,7 @@ export default function QueueModal({ isOpen, onDismiss, proposalId }: QueueModal
           <AutoColumn gap="100px" justify="center">
             <AutoColumn gap="md" justify="center">
               <ThemedText.DeprecatedLargeHeader>
-                <Trans>Transaction Submitted</Trans>
+                Transaction Submitted
               </ThemedText.DeprecatedLargeHeader>
             </AutoColumn>
             {chainId && (
@@ -141,7 +141,7 @@ export default function QueueModal({ isOpen, onDismiss, proposalId }: QueueModal
                 style={{ marginLeft: '4px' }}
               >
                 <ThemedText.DeprecatedSubHeader>
-                  <Trans>View transaction on Explorer</Trans>
+                  View transaction on Explorer
                 </ThemedText.DeprecatedSubHeader>
               </ExternalLink>
             )}

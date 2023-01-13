@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { CurrencyAmount, Percent, Token } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
@@ -86,7 +86,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
             <Text fontWeight={500} fontSize={20}>
               {!currency0 || !currency1 ? (
                 <Dots>
-                  <Trans>Loading</Trans>
+                  Loading
                 </Dots>
               ) : (
                 `${currency0.symbol}/${currency1.symbol}`
@@ -102,12 +102,12 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
             >
               {showMore ? (
                 <>
-                  <Trans>Manage</Trans>
+                  Manage
                   <ChevronUp size="20" style={{ marginLeft: '10px' }} />
                 </>
               ) : (
                 <>
-                  <Trans>Manage</Trans>
+                  Manage
                   <ChevronDown size="20" style={{ marginLeft: '10px' }} />
                 </>
               )}
@@ -119,7 +119,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
           <AutoColumn gap="sm">
             <FixedHeightRow>
               <Text fontSize={16} fontWeight={500}>
-                <Trans>Your total pool tokens:</Trans>
+                Your total pool tokens:
               </Text>
               <Text fontSize={16} fontWeight={500}>
                 {userPoolBalance ? userPoolBalance.toSignificant(4) : '-'}
@@ -128,7 +128,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
             {stakedBalance && (
               <FixedHeightRow>
                 <Text fontSize={16} fontWeight={500}>
-                  <Trans>Pool tokens in rewards pool:</Trans>
+                  Pool tokens in rewards pool:
                 </Text>
                 <Text fontSize={16} fontWeight={500}>
                   {stakedBalance.toSignificant(4)}
@@ -138,7 +138,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
             <FixedHeightRow>
               <RowFixed>
                 <Text fontSize={16} fontWeight={500}>
-                  <Trans>Pooled {currency0.symbol}:</Trans>
+                  Pooled {currency0.symbol}:
                 </Text>
               </RowFixed>
               {token0Deposited ? (
@@ -156,7 +156,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
             <FixedHeightRow>
               <RowFixed>
                 <Text fontSize={16} fontWeight={500}>
-                  <Trans>Pooled {currency1.symbol}:</Trans>
+                  Pooled {currency1.symbol}:
                 </Text>
               </RowFixed>
               {token1Deposited ? (
@@ -173,7 +173,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
 
             <FixedHeightRow>
               <Text fontSize={16} fontWeight={500}>
-                <Trans>Your pool share:</Trans>
+                Your pool share:
               </Text>
               <Text fontSize={16} fontWeight={500}>
                 {poolTokenPercentage
@@ -191,7 +191,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
                   to={`/migrate/v2/${pair.liquidityToken.address}`}
                   width="64%"
                 >
-                  <Trans>Migrate</Trans>
+                  Migrate
                 </ButtonPrimary>
                 <ButtonSecondary
                   padding="8px"
@@ -200,7 +200,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
                   width="32%"
                   to={`/remove/v2/${currencyId(currency0)}/${currencyId(currency1)}`}
                 >
-                  <Trans>Remove</Trans>
+                  Remove
                 </ButtonSecondary>
               </RowBetween>
             )}

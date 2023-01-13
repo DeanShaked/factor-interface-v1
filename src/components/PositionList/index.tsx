@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import PositionListItem from 'components/PositionListItem'
 import React from 'react'
 import styled from 'styled-components/macro'
@@ -74,7 +74,7 @@ export default function PositionList({
     <>
       <DesktopHeader>
         <div>
-          <Trans>Your positions</Trans>
+          Your positions
           {positions && ' (' + positions.length + ')'}
         </div>
 
@@ -84,18 +84,18 @@ export default function PositionList({
             setUserHideClosedPositions(!userHideClosedPositions)
           }}
         >
-          {userHideClosedPositions ? <Trans>Show closed positions</Trans> : <Trans>Hide closed positions</Trans>}
+          {userHideClosedPositions ? "Show closed positions" : "Hide closed positions"}
         </ToggleLabel>
       </DesktopHeader>
       <MobileHeader>
-        <Trans>Your positions</Trans>
+        Your positions
         <ToggleWrap>
           <ToggleLabel
             onClick={() => {
               setUserHideClosedPositions(!userHideClosedPositions)
             }}
           >
-            {userHideClosedPositions ? <Trans>Show closed positions</Trans> : <Trans>Hide closed positions</Trans>}
+            {userHideClosedPositions ? "Show closed positions" : "Hide closed positions"}
           </ToggleLabel>
         </ToggleWrap>
       </MobileHeader>

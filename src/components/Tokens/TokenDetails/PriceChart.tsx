@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { AxisBottom, TickFormatter } from '@visx/axis'
 import { localPoint } from '@visx/event'
 import { EventType } from '@visx/event/lib/types'
@@ -141,10 +141,10 @@ export function PriceChart({ width, height, prices: originalPrices, timePeriod }
   const missingPricesMessage = !chartAvailable ? (
     prices?.length === 0 ? (
       <>
-        <Trans>Missing price data due to recently low trading volume on Uniswap v3</Trans>
+        Missing price data due to recently low trading volume on Uniswap v3
       </>
     ) : (
-      <Trans>Missing chart data</Trans>
+      "Missing chart data"
     )
   ) : null
 

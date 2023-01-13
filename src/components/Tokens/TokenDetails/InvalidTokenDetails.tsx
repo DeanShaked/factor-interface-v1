@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
@@ -41,13 +41,13 @@ export default function InvalidTokenDetails({ chainName }: { chainName?: string 
       <EyeIcon />
       <InvalidDetailsText>
         {chainName ? (
-          <Trans>{`This token doesn't exist on ${chainName}`}</Trans>
+          `This token doesn't exist on ${chainName}`
         ) : (
-          <Trans>This token doesn&apos;t exist</Trans>
+          "This token doesn&apos;t exist"
         )}
       </InvalidDetailsText>
       <TokenExploreButton onClick={() => navigate('/tokens')}>
-        <Trans>Explore tokens</Trans>
+        Explore tokens
       </TokenExploreButton>
     </InvalidDetailsContainer>
   )

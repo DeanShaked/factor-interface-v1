@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 // eslint-disable-next-line no-restricted-imports
 import { t } from '@lingui/macro'
 import Column from 'components/Column'
@@ -116,14 +116,14 @@ export const NFTListingsGrid = ({ selectedMarkets }: { selectedMarkets: ListingM
     <Column>
       <TableHeader>
         <NFTHeader>
-          <Trans>NFT</Trans>
+          NFT
         </NFTHeader>
         <PriceHeaders>
           <PriceInfoHeader>
-            <Trans>Floor</Trans>
+            Floor
           </PriceInfoHeader>
           <PriceInfoHeader>
-            <Trans>Last</Trans>
+            Last
           </PriceInfoHeader>
 
           <DropdownWrapper>
@@ -131,10 +131,10 @@ export const NFTListingsGrid = ({ selectedMarkets }: { selectedMarkets: ListingM
           </DropdownWrapper>
 
           <FeeHeader>
-            <Trans>Fees</Trans>
+            Fees
           </FeeHeader>
           <UserReceivesHeader>
-            <Trans>You receive</Trans>
+            You receive
           </UserReceivesHeader>
         </PriceHeaders>
       </TableHeader>

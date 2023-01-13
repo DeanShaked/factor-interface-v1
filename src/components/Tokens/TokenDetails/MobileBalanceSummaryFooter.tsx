@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { formatCurrencyAmount, NumberType } from '@uniswap/conedison/format'
 import { Currency } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
@@ -91,7 +91,7 @@ export default function MobileBalanceSummaryFooter({ token }: { token: Currency 
     <Wrapper>
       {Boolean(account && balance) && (
         <BalanceInfo>
-          <Trans>Your {token.symbol} balance</Trans>
+          Your {token.symbol} balance
           <Balance>
             <BalanceValue>
               {formattedBalance} {token.symbol}
@@ -101,7 +101,7 @@ export default function MobileBalanceSummaryFooter({ token }: { token: Currency 
         </BalanceInfo>
       )}
       <SwapButton to={`/swap?chainName=${chain}&outputCurrency=${token.isNative ? NATIVE_CHAIN_ID : token.address}`}>
-        <Trans>Swap</Trans>
+        Swap
       </SwapButton>
     </Wrapper>
   )

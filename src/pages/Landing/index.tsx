@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Trace, TraceEvent } from '@uniswap/analytics'
 import { BrowserEvent, InterfaceElementName, InterfacePageName, SharedEventName } from '@uniswap/analytics-events'
 import { AboutFooter } from 'components/About/AboutFooter'
@@ -336,7 +336,7 @@ export default function Landing() {
                 cardsRef?.current?.scrollIntoView({ behavior: 'smooth' })
               }}
             >
-              <Trans>Learn more</Trans>
+              Learn more
               <LearnMoreArrow />
             </LearnMoreContainer>
           </ContentContainer>

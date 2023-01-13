@@ -1,6 +1,5 @@
-import { Trans } from '@lingui/macro'
+
 import { useWeb3React } from '@web3-react/core'
-import { TransactionSummary } from 'components/AccountDetailsV2'
 import { ButtonPrimary } from 'components/Button'
 import { useActiveLocale } from 'hooks/useActiveLocale'
 import { useMemo } from 'react'
@@ -136,10 +135,10 @@ const WalletDropdown = ({ setMenu }: { setMenu: (state: MenuState) => void }) =>
         <>
           <ToggleMenuItem data-testid="wallet-transactions" onClick={() => setMenu(MenuState.TRANSACTIONS)}>
             <DefaultText>
-              <Trans>Transactions</Trans>{' '}
+              Transactions{' '}
               {pendingTransactions.length > 0 && (
                 <PendingBadge>
-                  {pendingTransactions.length} <Trans>Pending</Trans>
+                  {pendingTransactions.length} Pending
                 </PendingBadge>
               )}
             </DefaultText>
@@ -147,20 +146,11 @@ const WalletDropdown = ({ setMenu }: { setMenu: (state: MenuState) => void }) =>
               <ChevronRight size={16} strokeWidth={3} />
             </IconWrap>
           </ToggleMenuItem>
-          {!!latestPendingTransaction && (
-            <LatestPendingTxnBox>
-              <TransactionSummary
-                key={latestPendingTransaction.hash}
-                transactionDetails={latestPendingTransaction}
-                isLastTransactionInList={true}
-              />
-            </LatestPendingTxnBox>
-          )}
         </>
       )}
       <ToggleMenuItem data-testid="wallet-select-language" onClick={() => setMenu(MenuState.LANGUAGE)}>
         <DefaultText>
-          <Trans>Language</Trans>
+          Language
         </DefaultText>
         <FlexContainer>
           <CenterVertically>
@@ -172,7 +162,7 @@ const WalletDropdown = ({ setMenu }: { setMenu: (state: MenuState) => void }) =>
         </FlexContainer>
       </ToggleMenuItem>
       <ToggleMenuItem data-testid="wallet-select-theme" onClick={toggleDarkMode}>
-        <DefaultText>{darkMode ? <Trans> Light theme</Trans> : <Trans>Dark theme</Trans>}</DefaultText>
+        <DefaultText>{darkMode ?  "Light theme" : "Dark theme"}</DefaultText>
         <IconWrap>{darkMode ? <Sun size={16} /> : <Moon size={16} />}</IconWrap>
       </ToggleMenuItem>
     </DefaultMenuWrap>

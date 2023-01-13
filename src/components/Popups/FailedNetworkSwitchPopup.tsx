@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { getChainInfo } from 'constants/chainInfo'
 import { SupportedChainId } from 'constants/chains'
 import { AlertTriangle } from 'react-feather'
@@ -24,12 +24,12 @@ export default function FailedNetworkSwitchPopup({ chainId }: { chainId: Support
             <AlertTriangle color={theme.accentWarning} size={24} display="flex" />
           </div>
           <ThemedText.SubHeader>
-            <Trans>Failed to switch networks</Trans>
+            Failed to switch networks
           </ThemedText.SubHeader>
         </RowNoFlex>
 
         <ThemedText.BodySmall>
-          <Trans>To use Uniswap on {chainInfo.label}, switch the network in your wallet’s settings.</Trans>
+          To use Uniswap on {chainInfo.label}, switch the network in your wallet’s settings.
         </ThemedText.BodySmall>
       </AutoColumn>
     </RowNoFlex>

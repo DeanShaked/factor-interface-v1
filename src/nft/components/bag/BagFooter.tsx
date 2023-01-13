@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { parseEther } from '@ethersproject/units'
-import { Trans } from '@lingui/macro'
+
 import { TraceEvent } from '@uniswap/analytics'
 import { BrowserEvent, InterfaceElementName, NFTEventName } from '@uniswap/analytics-events'
 import { useWeb3React } from '@web3-react/core'
@@ -131,37 +131,37 @@ export const BagFooter = ({
 
   const { buttonText, disabled, warningText, handleClick } = useMemo(() => {
     let handleClick = fetchAssets
-    let buttonText = <Trans>Something went wrong</Trans>
+    let buttonText = Something went wrong
     let disabled = true
     let warningText = null
 
     if (connected && chainId !== SupportedChainId.MAINNET) {
       handleClick = () => switchChain(connector, SupportedChainId.MAINNET)
-      buttonText = <Trans>Switch networks</Trans>
+      buttonText = Switch networks
       disabled = false
-      warningText = <Trans>Wrong network</Trans>
+      warningText = Wrong network
     } else if (sufficientBalance === false) {
-      buttonText = <Trans>Pay</Trans>
+      buttonText = Pay
       disabled = true
-      warningText = <Trans>Insufficient funds</Trans>
+      warningText = Insufficient funds
     } else if (bagStatus === BagStatus.WARNING) {
-      warningText = <Trans>Something went wrong. Please try again.</Trans>
+      warningText = Something went wrong. Please try again.
     } else if (!connected) {
       handleClick = () => {
         toggleWalletModal()
         setBagExpanded({ bagExpanded: false })
       }
       disabled = false
-      buttonText = <Trans>Connect wallet</Trans>
+      buttonText = Connect wallet
     } else if (bagStatus === BagStatus.FETCHING_FINAL_ROUTE || bagStatus === BagStatus.CONFIRMING_IN_WALLET) {
       disabled = true
-      buttonText = <Trans>Proceed in wallet</Trans>
+      buttonText = Proceed in wallet
     } else if (bagStatus === BagStatus.PROCESSING_TRANSACTION) {
       disabled = true
-      buttonText = <Trans>Transaction pending</Trans>
+      buttonText = Transaction pending
     } else if (sufficientBalance === true) {
       disabled = false
-      buttonText = <Trans>Pay</Trans>
+      buttonText = Pay
     }
 
     return { buttonText, disabled, warningText, handleClick }

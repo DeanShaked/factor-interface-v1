@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { Token } from '@uniswap/sdk-core'
 import Badge, { BadgeVariant } from 'components/Badge'
 import { transparentize } from 'polished'
@@ -48,7 +48,7 @@ export default function SushiPositionCard({ tokenA, tokenB, liquidityToken, bord
             <Text fontWeight={500} fontSize={20}>
               {!currency0 || !currency1 ? (
                 <Dots>
-                  <Trans>Loading</Trans>
+                  Loading
                 </Dots>
               ) : (
                 `${currency0.symbol}/${currency1.symbol}`
@@ -65,7 +65,7 @@ export default function SushiPositionCard({ tokenA, tokenB, liquidityToken, bord
               as={Link}
               to={`/migrate/v2/${liquidityToken.address}`}
             >
-              <Trans>Migrate</Trans>
+              Migrate
             </ButtonEmpty>
           </RowFixed>
         </FixedHeightRow>

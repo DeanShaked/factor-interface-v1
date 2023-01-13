@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { ListingMarket } from 'nft/types'
 // eslint-disable-next-line no-restricted-imports
 import styled from 'styled-components/macro'
@@ -20,7 +20,7 @@ export const RoyaltyTooltip = ({ selectedMarket }: { selectedMarket: ListingMark
         {selectedMarket.name}: {selectedMarket.fee}%
       </FeeWrap>
       <FeeWrap>
-        <Trans>Creator royalties</Trans>: {selectedMarket.royalty}%
+        Creator royalties: {selectedMarket.royalty}%
       </FeeWrap>
     </RoyaltyContainer>
   )

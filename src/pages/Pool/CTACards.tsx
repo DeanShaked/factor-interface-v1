@@ -1,4 +1,4 @@
-import { Trans } from '@lingui/macro'
+
 import { useWeb3React } from '@web3-react/core'
 import { AutoColumn } from 'components/Column'
 import { getChainInfoOrDefault } from 'constants/chainInfo'
@@ -100,20 +100,20 @@ export default function CTACards() {
       <CTA1 href="https://support.uniswap.org/hc/en-us/articles/7423608592781">
         <ResponsiveColumn>
           <HeaderText>
-            <Trans>Learn about providing liquidity</Trans> ↗
+            Learn about providing liquidity ↗
           </HeaderText>
           <ThemedText.DeprecatedBody fontWeight={400} style={{ alignItems: 'center', display: 'flex' }}>
-            <Trans>Check out our v3 LP walkthrough and migration guides.</Trans>
+            Check out our v3 LP walkthrough and migration guides.
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
       </CTA1>
       <CTA2 data-testid="cta-infolink" href={infoLink + 'pools'}>
         <ResponsiveColumn>
           <HeaderText style={{ alignSelf: 'flex-start' }}>
-            <Trans>Top pools</Trans> ↗
+            Top pools ↗
           </HeaderText>
           <ThemedText.DeprecatedBody fontWeight={400} style={{ alignSelf: 'flex-start' }}>
-            <Trans>Explore Uniswap Analytics.</Trans>
+            Explore Uniswap Analytics.
           </ThemedText.DeprecatedBody>
         </ResponsiveColumn>
       </CTA2>
